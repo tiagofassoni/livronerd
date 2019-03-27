@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <meta charset="ISO-8859-1">
+    <title>Encontre o seu livro nerd ideal | Estante Virtual</title>
+    <meta property="og:url" content="http://www.estantevirtual.com.br/livronerd/">
+    <meta property="og:image" content="http://www.estantevirtual.com.br/livronerd/imagens/fb-share.jpg/">
+    <meta property="og:title" content="Encontre o seu livro nerd ideal | Estante Virtual">
+    <meta property="og:description" content="Eu já encontrei a minha próxima leitura nerd. Jogue e veja uma recomendação para você!">
+    <meta property="og:site_name" content="Estante Virtual">
+
+    <link rel="stylesheet" href="index_files/style.css">
+    <link rel="canonical" href="http://www.estantevirtual.com.br/livronerd/">
+</head>
+<body>
+    <div id="quiz-fixed-top" class="fixed-top">
+        <div class="wrapper">
+            <h2 class="subtitle clear">
+                <a class="reload" href="#"><span class="subtitle-box subtitle-left">dia do <br>orgulho</span>
+                    <span class="subtitle-box subtitle-big">nerd</span>
+                    <span class="subtitle-box subtitle-right">
+                        ou
+                        <span class="subtitle-break">dia da toalha</span>
+                    </span>
+                </a>
+            </h2>
+
+            <a href="http://www.estantevirtual.com.br/mod_perl/home.cgi?gacp=dia-da-toalha-13&amp;gaid=home" class="ev-logo-link">
+                <img class="" src="index_files/ev-logo-link.png" alt="www.estantevirtual.com.br">
+            </a>
+
+            <div id="quiz-controls" class="">
+                <div class="quiz-avatar"></div>
+                <div class="quiz-remaining">
+                    Livros Possíveis
+                    <strong class="quiz-remaining-strong">0</strong>
+                </div>
+            </div>
+        </div>
+
+         <a href="#" class="quiz-back-button">voltar para pergunta anterior</a>
+    </div>
+
+    <div id="quiz-content">
+
+        <div class="quiz-wrapper header">
+            <div class="global-books">
+                <span class="flying-book"></span>
+                <span class="flying-book"></span>
+                <span class="flying-book"></span>
+                <span class="flying-book"></span>
+                <span class="flying-book"></span>
+            </div>
+
+            <img src="index_files/nerd-header.png" alt="Nerd" class="nerd-logo">
+            <h1 class="title">Encontre <span class="title-small">o seu livro nerd ideal</span></h1>
+            <p class="description">Enquanto você aguarda o apocalipse 
+zumbi, responda ao jogo e descubra os livros indispensáveis para sua 
+estante. Que a força esteja com você!</p>
+
+            <a href="#first" class="quiz-answer-link quiz-start-button">Jogar Agora</a>
+        </div>
+
+    </div>
+
+<script type="text/x-handlebars-template" id="quiz-content-template">
+    <div class="quiz-wrapper quiz-template-answers" data-key="{{target}}">
+        <div class="quiz-question">{{title}}</div>
+        {{#if keys}}
+        <ul class="quiz-answers quiz-answers-length-{{keys.length}}">
+            {{#each keys}}
+            <li class="quiz-answers-li"><a href="#{{this.href}}" class="quiz-answer-link quiz-answer-key">{{this.text}}</a></li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+
+</script>
+
+
+<script type="text/x-handlebars-template" id="quiz-book-template">
+    <div class="quiz-wrapper quiz-template-books">
+        <div class="quiz-book-avatar face-avatar-{{face}}"></div>
+        <div class="quiz-book-page-title">{{title}}</div>
+        <div class="description">{{desc}}</div>
+        {{#if keys}}
+        <ul class="quiz-books">
+            {{#each keys}}
+            <li class="quiz-books-li">
+                <a href="{{this.link}}" class="quiz-books-key" target="_blank">
+                    <div class="quiz-book-figure">
+                        <img src="http://imagens2.estantevirtual.com.br/conteudo/livronerd/imagens/capas/{{this.cover}}" alt="{{this.title}}" class="quiz-book-img">
+                        <div class="quiz-book-flag quiz-book-flag-{{this.flag}}">
+                            {{#if this.economy}}
+                                Economize até {{this.economy}}%
+                            {{else}}
+                                Disponível só na Estante
+                            {{/if}}
+                        </div>
+                        <div class="quiz-book-desc">{{this.desc}}</div>
+                    </div>
+                    <div class="quiz-book-title">{{this.title}}</div>
+                    <div class="quiz-book-price">A partir de <span class="quiz-book-price-tag">R$ {{this.price}}</span></div>
+                    <span class="quiz-book-buy-button">Comprar na Estante</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+
+        <div class="after-buttons">
+            <a class="after-button facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.estantevirtual.com.br%2Flivronerd" target="_blank">
+                compartilhe com seus amigos
+            </a>
+            <a class="after-button reload" href="#">
+                quero mais livros nerd
+            </a>
+            <a class="after-button more-books" href="http://www.estantevirtual.com.br/mod_perl/home.cgi?gacp=dia-da-toalha-13&gaid=home" target="_blank">
+                ver mais livros na estante
+            </a>
+        </div>
+    </div>
+</script>
+
+<script src="index_files/jquery.js"></script>
+<script src="index_files/handlebars.js"></script>
+<script src="index_files/dados.js"></script>
+<script src="index_files/quiz.js"></script>
+
+
+
+</body></html>
